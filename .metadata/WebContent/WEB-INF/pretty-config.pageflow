@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf15481034270570" configfile="/webapp/WebContent/WEB-INF/pretty-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="index.xhtml" x="122" y="178" id="pf15481034372001" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" outlinks="pf15481034372002 pf15481034372003" inlinks="pf15481034372002 pf15481034372003" path="index.xhtml"/>
+  <links id="pf15481034372002" target="pf15481034372001" source="pf15481034372001" outcome="success" fromaction="#{jsfPageController.processPage1}">
+    <bendPoints d1Height="-36" d2Height="-36"/>
+    <bendPoints d1Width="-64" d1Height="-36" d2Width="-64" d2Height="-36"/>
+    <bendPoints d1Width="-64" d2Width="-64"/>
+  </links>
+  <links id="pf15481034372003" target="pf15481034372001" source="pf15481034372001" outcome="success" fromaction="#{jsfPageController.processPage2}">
+    <bendPoints d1Height="-66" d2Height="-66"/>
+    <bendPoints d1Width="-94" d1Height="-66" d2Width="-94" d2Height="-66"/>
+    <bendPoints d1Width="-94" d2Width="-94"/>
+  </links>
+</pageflow:Pageflow>

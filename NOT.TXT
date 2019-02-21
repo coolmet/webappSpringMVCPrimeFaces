@@ -1,0 +1,6 @@
+http://localhost:8080/webappSpringMVCPrimeFaces/loginPage
+http://localhost:8080/webappSpringMVCPrimeFaces/partialPage
+http://localhost:8080/webappSpringMVCPrimeFaces/mainPage
+http://localhost:8080/webappSpringMVCPrimeFaces/carPage
+http://localhost:8080/webappSpringMVCPrimeFaces/index.jsf
+http://localhost:8080/webappSpringMVCPrimeFaces/faces/index.xhtml

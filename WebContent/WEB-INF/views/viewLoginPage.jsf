@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core" xmlns:p="http://primefaces.org/ui" xmlns:pm="http://primefaces.org/mobile">
+<h:head>
+	<meta name="description" content="particles.js is a lightweight JavaScript library for creating particles." />
+	<meta name="author" content="Vincent Garreau" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<link type="text/css" rel="stylesheet" href="resources/css/particles/style.css" />
+
+</h:head>
+<h:body onLoad="dialog.show()">
+
+	<p:dialog header="#{text['user.login.pane.header']}" widgetVar="dialog" position="center center" showEffect="bounce" minimizable="false" maximizable="false" resizable="false" draggable="false"
+		closable="false" visible="true" appendToBody="true" responsive="true">
+		<h:form>
+			<h:outputText for="advanced" value="#{text['language']} " />
+			<p:selectOneMenu id="advanced" converter="LanguageItemToEntityConverter" value="#{languageSelectBean.language}" immediate="true" panelStyle="width:120px" effect="fade" var="lang"
+				style="width:40px; font-size: 12px;" valueChangeListener="#{languageSelectBean.localeCodeChanged}">
+				
+				
+				<f:selectItems value="#{languageSelectBean.languages}" var="language" itemLabel="#{language.displayName}" itemValue="#{language}" />
+				<p:column style="width:5%">
+					<h:graphicImage name="images/locale-#{lang.displayName}_2.png" styleClass="ui-theme" width="30" height="25" />
+				</p:column>
+
+				<p:column>
+					<h:outputText value="#{lang.displayName}" />
+				</p:column>
+				<p:ajax event="itemSelect" update=":selectedItemText" />
+			</p:selectOneMenu>
+			<p:separator />
+			<h:outputText value="This Dialog can be Maximized an Minimized!" />
+		</h:form>
+		<h:outputText id="selectedItemText" value="#{languageSelectBean.language.displayName}" />
+	</p:dialog>
+
+	<div id="particles-js"></div>
+	<h:outputScript library="js" name="particles/particles.js" target="body" />
+	<h:outputScript library="js" name="particles/particles.min.js" target="body" />
+	<h:outputScript library="js" name="particles/app.js" target="body" />
+	<h:outputScript library="js" name="particles/stats.js" target="body" />
+
+</h:body>
+</html>
